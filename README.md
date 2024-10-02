@@ -8,7 +8,7 @@ The API used for this project is `https://www.thecocktaildb.com/api.php`
 
 ## Architecture
 The tools used for this project are shown in the diagram that was created using `drawio` below:
-![Alt text](./API2Kafka.svg)
+![Alt text](./API2Kafka.png)
 
 
 ## Overview
