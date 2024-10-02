@@ -29,7 +29,7 @@ def main():
     topic = "drinks_data_combined"
     key = f"drinks_recipes"
     url = "https://www.thecocktaildb.com/api/json/v1/1/search.php?f="
-    chars = "a"#bcdefghijklmnopqrstuvwxyz0123456789"
+    chars = "abcdefghijklmnopqrstuvwxyz0123456789"
     chars = list(chars)
     minio_bucket = "minio-bucket"
     minio_blob = MinioBlob(client=server,
@@ -58,7 +58,7 @@ def main():
         print(f"Data saved to Minio, within '{minio_bucket}/{file_name}'")
 
         print("Saving data locally...")
-        save_locally(file_name="drinks.csv", local_path="./app/minio_data", data=dt, delimiter=";")
+        save_locally(file_name="drinks.csv", local_path="./data/minio_data", data=dt, delimiter=";")
 
     elif invalid_count != 0:
         print("Data is invalid")

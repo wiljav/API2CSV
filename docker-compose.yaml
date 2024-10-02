@@ -37,7 +37,7 @@ services:
     networks:
       - minionetwork
     volumes:
-      - "./apps/minio_data:/minio/data" #Default bucket location is: /bitnami/minio/data/minio-bucket.
+      - "./data/minio_data:/minio/data" #Default bucket location is: /bitnami/minio/data/minio-bucket.
     environment:
       - MINIO_ROOT_USER=${MINIO_ROOT_USER}
       - MINIO_ROOT_PASSWORD=${MINIO_ROOT_PASSWORD}

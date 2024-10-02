@@ -11,7 +11,7 @@ This project is designed to retrieve data from an API, process it using Kafka, a
 ```
 API_retrieval/
 │
-├── apps/
+├── data/
 │   │
 │   └── minio_data/            # Directory for MinIO data
 │
