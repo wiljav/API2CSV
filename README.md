@@ -34,8 +34,8 @@ API_retrieval/
 ## Setup
 1. Clone this repository:
    ```bash
-   git clone https://github.com/wiljav/API_retrieval.git
-   cd API_retrieval
+   git clone https://github.com/wiljav/API2CSV.git
+   cd API2CSV
    ```
 2. Make the script executable (__On macOS/Linux only__) :
      ```bash
