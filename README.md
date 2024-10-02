@@ -3,6 +3,13 @@
 ## Overview
 This project is designed to retrieve data from an API, process it using **Apache Kafka**, and store the results in **MinIO**. It utilizes **Pandas** for data manipulation and analysis. The setup employs **Docker** for containerization, ensuring a consistent environment across different platforms.
 
+## API Data
+The API used for this project is `https://www.thecocktaildb.com/api.php`
+
+## Architecture
+The tools used for this project are shown in the diagram that was created using `drawio` below:
+![Alt text](./API2Kafka.png)
+
 
 ## Overview
 This project is designed to retrieve data from an API, process it using Kafka, and store the results in MinIO. The setup utilizes Docker for containerization, ensuring a consistent environment across different platforms.
