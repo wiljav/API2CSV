@@ -1,0 +1,28 @@
+# run.ps1
+
+$minioDataDir = "./apps/minio_data"
+
+# Check if the directory exists
+if (Test-Path -Path $minioDataDir) {
+    Write-Host "Directory $minioDataDir exists. Cleaning it..."
+    Remove-Item -Recurse -Force "$minioDataDir\*"
+} else {
+    Write-Host "Directory $minioDataDir doesn't exist. Creating it..."
+    New-Item -ItemType Directory -Force -Path $minioDataDir 
+}
+
+# Create Python virtual environment
+Write-Host "Creating Python virtual environment..."
+python -m venv venv
+
+# Activate the virtual environment
+Write-Host "Activating virtual environment..."
+& ".\venv\Scripts\Activate.ps1"
+
+# Install requirements
+Write-Host "Installing requirements..."
+pip install -r requirements.txt
+
+# Running Docker Compose
+Write-Host "Running Docker Compose..."
+docker-compose --env-file ./docker_compose_keys.env up -d
